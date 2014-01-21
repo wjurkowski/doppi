@@ -1,0 +1,37 @@
+This script manage PP docking work flow.
+
+tools
+        1. Ftdock 
+        2. Zdock 
+        3. Rosetta 
+        4. Gramm-X http://vakser.bioinformatics.ku.edu/resources/gramm/grammx (in plans)
+	5. CABS (in plans)
+
+To run the script:
+dodock.pl opcje molstatic molmobile
+
+
+Release notes:
+
+	v27
+	 -no extra output file for zdock,ftdock,rosetta i firedock, all logs goes either on STDOUT or to main output file
+	 -fixed zdock: bad parameters when running without preparatory phase (zdock1=0)
+	 -added time stamp into the outpu file
+ 	 -fixed output file presence check
+	
+	v26 - last fixes of rosetta runs, alfa
+	v25 - updates
+	v24 - updates
+	v23 - added modules: DoFiredock, AnalyzeInterace and FindSite, beta
+	v22 - final version for Capri18, alfa
+	v21 - some updates, beta 
+	v20 - new modularised version, beta
+	3.18 - drobne korekty opisu, dodanie sleep dla ftdock
+	3.17 - final version for ftdock znd zdock
+	3.8: final version for ftdock 
+	3.6: ftdock with time stamp in file name (obsolete)
+
+
+
+
+

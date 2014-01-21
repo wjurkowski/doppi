@@ -1,0 +1,7 @@
+&basics 
+filetp=1,minres=5
+stranal=0,dorama=0,dihstat=0,elipsa=0,gridok=0,anal_bs=0
+/
+&inpout
+saveseq=1,seqtype=1
+/

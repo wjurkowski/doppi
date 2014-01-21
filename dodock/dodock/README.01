@@ -1,0 +1,65 @@
+
+Program parameters. 0 - parameter switched off, 1 - on.
+
+easy #setup job on easy batch system
+	time2 #run time 
+	startt #start time
+dbpath #path to protein structure files
+find_templ #search for template
+
+zdock #run zdock
+zdock_bin #path to zdock set if not in path already 
+block #block selected residues
+zd_poses 10000 #number of poses to write
+zd_seed 99999 #random generator seed
+zd_grid 12 #grid space
+zd_r1 1 #1st model to rerank with zrank 
+zd_r2 10000 #last model to rerank with zrank
+zr_cutoff 1000 #zrank cutoff of top models to save
+zdock1 0 #preparatory work
+zdock2 0 #zdock run
+zdock3 0 #check results
+zdock4 0 #build model files
+zdock5 0 #rerank
+
+#ftdock____
+ftdock 0
+ftdock_bin /usr/local/bin/
+rspin 0
+ftdock1 1
+ftdock2 1
+rerun 0
+ftdock3 1
+ftdock4 1
+ftdock5 1
+build 0
+centres 0
+scoret 0
+ftd_r1 1
+ftd_r2 2000
+filtruj 0
+
+#firedock____
+firedock 0
+firedock_bin /usr/local/bin/
+zdockin 0
+
+#rosetta____
+rosetta 0
+rosetta_bin /usr/local/bin/
+rosetta1 0
+rosetta2 1
+rosetta3 0
+rosetta4 0
+rosetta5 0
+
+#postprocess
+run zdock
+get_all_rms 0
+get_top_rms 0
+rms_type 1
+get_all_contacts 0
+get_top_contacts 1
+contact_radii 40
+contact_cutoff 5
+

@@ -1,0 +1,63 @@
+easy 0
+#time2 840 
+#startt 0
+dbpath .
+find_templ 0
+
+#zdock____
+#zdock_bin /usr/local/bin/
+zdock 0
+block 0
+zd_poses 10000
+zd_seed 99999
+zd_grid 12
+zd_r1 1
+zd_r2 10000
+zr_cutoff 1000
+zdock1 0
+zdock2 0
+zdock3 0
+zdock4 0
+zdock5 0
+
+#ftdock____
+ftdock 0
+ftdock_bin /usr/local/bin/
+rspin 0
+ftdock1 1
+ftdock2 1
+rerun 0
+ftdock3 1
+ftdock4 1
+ftdock5 1
+build 0
+centres 0
+scoret 0
+ftd_r1 1
+ftd_r2 2000
+filtruj 0
+
+#firedock____
+firedock 0
+firedock_bin /usr/local/bin/
+zdockin 0
+
+#rosetta____
+rosetta 0
+rosetta_bin /usr/local/bin/
+rosetta1 0
+rosetta2 1
+rosetta3 0
+rosetta4 0
+rosetta5 0
+
+#postprocess
+run zdock
+get_all_rms 0
+get_top_rms 0
+rms_type 1
+get_all_contacts 0
+get_top_contacts 1
+contact_radii 40
+contact_cutoff 5
+

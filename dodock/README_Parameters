@@ -1,0 +1,35 @@
+Parameter file
+
+Parameter file contains all the options necessary to start given job. Section starts with 
+!program name
+after which follow options of program run. None parameter has default value, their must be placed in the file to be found.
+
+!ftdock
+dbpath #pat to the directory with PDB formated structure files.
+easy 1 #start easy batch system job 
+time2 180 #time of easy job
+startt 2008-07-17/19:00:00 #time at which easy start
+rspin 0 #spin the molecule before docking
+stage1 1 #preparation of input files
+stage2 0 #docking
+stage3 0 #scoring
+stage4 0 #filtering and PDB production
+ filtruj 1 #start filters
+ centres 1 #rob wynik z modelem liganda jako punkt wokol receptora
+ build 1 #tworzy PDB
+	r1 #first value of models range
+	r2 #second value of models range
+ scoret # scoring type 
+	1 - native ftdock
+	2 - rpscore		
+filters
+1 A:B
+2 A:B5
+3 A145:B76
+1+2+3
+end.filters
+
+!zdock
+block 1 #use constraints on docked molecule
+block1 block.txt #definition of constraints
+
